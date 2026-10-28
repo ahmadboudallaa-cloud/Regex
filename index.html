@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Regex</title>
+</head>
+<body>
+
+
+
+
+
+<label for="">code massar</label>
+<input type="text" id="massar">
+<p id="message"></p>
+
+<script>
+
+    const massarCode = document.getElementById("massar")
+   const message = document.getElementById("message")
+
+   const regex = /^(?=.{10}$)[@gmail][a-zA-Z]+\d+$/
+
+
+
+   massarCode.addEventListener("input" , function(){
+    if(regex.test(massarCode.value)){
+        message.textContent = "valide"
+        message.style.color = "green"
+    }else{
+        message.textContent = "non valide"
+        message.style.color = "red"
+    }
+   })
+
+
+
+</script>
+
+    
+
+</body>
+</html>
